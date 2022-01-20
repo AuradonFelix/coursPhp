@@ -1,18 +1,6 @@
 <?php
 include_once('../methodes/connexion.php');
 
-//$id = 1;
-//// Préparer la requête
-//$query = 'SELECT * FROM donnees WHERE identifiant = ?;';
-//$prep = $pdo->prepare($query);
-//// Associer des valeurs aux "trous"
-//$prep->bindValue(1, $id);
-//// Exécuter la requête
-//$prep->execute();
-//// Récupérer les données retournées.
-//$arr = $prep->fetch();
-
-
 $rep='';
 $query = 'SELECT * FROM donnees;';
 $prep = $pdo->prepare($query);
@@ -60,26 +48,6 @@ $arrAll = $prep->fetchAll();
         }
 
         ?>
-
-
-<!--        <article id="art">-->
-<!--        --><?php
-//        echo '<h3>PAYS : ' . $arr['pays']  . ' </h3><br>';
-//        echo'<div>Capitale :'. $arr['capitale'] .'</div>';
-//        echo'<div>Nombre d\'habitants  :'. $arr['habitants'] .'</div>';
-//        echo'<div>Langue :'. $arr['langue'] .'</div>';
-//        echo'<div>Ecris par :'. $arr['author'] .'</div>';
-//        ?>
-<!--        </article>-->
-<!--        --><?php //foreach(getCountries($geo)as $pays) : ?>
-<!--            <article id="art">-->
-<!--                Pays : --><?php //echo ucfirst($pays['pays']); ?><!--</h3>-->
-<!--                <div>Capitale : --><?php //echo ucfirst($pays['capitale']); ?><!--</div>-->
-<!--                <div>Nombre d'habitants : --><?php //echo $pays['habitants']; ?><!-- habitants</div>-->
-<!--                <div>Langue : --><?php //echo ucfirst($pays['langue']); ?><!--</div>-->
-<!--                <div>Ecris par : --><?php //echo displayAuthor($pays['author'], $users); ?><!--</div>-->
-<!--            </article>-->
-<!--        --><?php //endforeach ?>
 
     </div>
 
